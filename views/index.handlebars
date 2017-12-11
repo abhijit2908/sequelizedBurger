@@ -1,0 +1,57 @@
+<div class="container">
+    
+    <div class="row">
+        <h1 class="text-center"> Eat Da Burger! </h1>
+        <img  class="img-center center-block" src="/assets/img/burger.jpg" width="200">
+    </div>
+
+    
+    <div class="row">   
+        <div class="form-group text-center col-md-6 col-md-offset-3">
+            <label for="burger"></label>
+            <textarea class="form-control input-sm " rows="5" id="burger"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class='text-center'>
+            <p> Enter a burger you want to eat and click the submit button </p>
+        </div>
+    </div>
+
+
+<div class ="row">
+  <div class = "col-md-6">
+<h2>Burger to be eaten</h2>
+<ol>
+	{{#each burgers}}
+		{{#unless this.Devoured}}
+		<li>
+  		<p><span class="label"></span> {{this.Burger_Name}} <button id="devourit" data-id="{{this.ID}}" class="btn btn-primary btn-space">Devour Burger</button></p>
+  		
+  	</li>
+  		{{/unless}}
+		{{/each}}
+  		
+</ol>
+</div>
+<div class = "col-md-6">
+<h2>Burger Devoured</h2>
+<ol>
+	{{#each burgers}}
+		{{#if this.Devoured}}
+		<li>
+  		<p><span class="label"></span> {{this.id}}</p>
+  		<p><span class="label"></span> {{this.Burger_Name}}</p>
+  	</li>
+  		{{/if}}
+		{{/each}}
+  		
+</ol>
+</div>
+</div>
+</div>
