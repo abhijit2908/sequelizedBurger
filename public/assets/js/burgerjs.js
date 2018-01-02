@@ -6,8 +6,8 @@ $(function(){
 
 
 		var newBurger = {
-			Burger_Name : $("#burger").val(),
-			Devoured : 0
+			burgername : $("#burger").val(),
+			devoured : 0
 
 		};
 		console.log(newBurger);
@@ -20,7 +20,6 @@ $(function(){
 		}).then(
 			function(){
 
-				//console.log("created new burger");
 				location.reload();
 			});
 	});
@@ -32,7 +31,7 @@ $(function(){
 
 		console.log(id);
 		var newDevourState = {
-			Devoured : 1
+			devoured : true
 
 		};
 		console.log(newDevourState);
@@ -45,7 +44,7 @@ $(function(){
 		}).then(
 			function(){
 
-				//console.log("created new burger");
+				
 				location.reload();
 			});
 	});

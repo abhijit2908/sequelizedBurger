@@ -29,9 +29,9 @@
 <h2>Burger to be eaten</h2>
 <ol>
 	{{#each burgers}}
-		{{#unless this.Devoured}}
+		{{#unless this.devoured}}
 		<li>
-  		<p><span class="label"></span> {{this.Burger_Name}} <button id="devourit" data-id="{{this.ID}}" class="btn btn-primary btn-space">Devour Burger</button></p>
+  		<p><span class="label"></span> {{this.burgername}} <button id="devourit" data-id="{{this.id}}" class="btn btn-primary btn-space">Devour Burger</button></p>
   		
   	</li>
   		{{/unless}}
@@ -43,10 +43,10 @@
 <h2>Burger Devoured</h2>
 <ol>
 	{{#each burgers}}
-		{{#if this.Devoured}}
+		{{#if this.devoured}}
 		<li>
-  		<p><span class="label"></span> {{this.id}}</p>
-  		<p><span class="label"></span> {{this.Burger_Name}}</p>
+  		{{!-- <p><span class="label"></span> {{this.id}}</p> --}}
+  		<p><span class="label"></span> {{this.burgername}}</p>
   	</li>
   		{{/if}}
 		{{/each}}

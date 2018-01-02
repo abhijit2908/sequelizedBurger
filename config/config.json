@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Bootcamp123",
-    "database": "sequelizeBurger_db",
+    "database": "sequelizeburger_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
